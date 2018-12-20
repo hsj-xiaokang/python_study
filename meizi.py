@@ -60,7 +60,7 @@ def getMM131Img(siteUrl):
 if __name__=='__main__':
     if not os.path.exists(PWD):
         os.makedirs(PWD)
-    for numberItem in range(1900, 1000000):
+    for numberItem in range(1000, 1000000):
     # for numberItem in range(1900,3900):
         # print numberItem
         # print 'http://www.mm131.com/xinggan/'+bytes(numberItem)+'.html'
