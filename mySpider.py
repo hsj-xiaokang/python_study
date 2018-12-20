@@ -19,7 +19,7 @@ PhotoNum = 0
 # 存放路径
 PWD = "E:/Python/ai2018-3-12/huaban/"
 # http头部
-head = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
+head = { "Referer":"http://huaban.com/",'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
 # 超时时间
 TimeOut = 30
 
