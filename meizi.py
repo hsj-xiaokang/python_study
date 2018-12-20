@@ -66,5 +66,6 @@ if __name__=='__main__':
         # print 'http://www.mm131.com/xinggan/'+bytes(numberItem)+'.html'
        try:
            getMM131Img('http://www.mm131.com/xinggan/'+bytes(numberItem)+'.html');
+           getMM131Img('http://www.mm131.com/qingchun/' + str(numberItem) + '.html');
        except Exception,e:
            print e.message
