@@ -81,6 +81,7 @@ def requestUrl(url):
             url_item = url_image + x_key
             # 文件名称
             filename = PWD + str(max_pin_id) + ".jpg"
+            print filename
             if os.path.isfile(filename):
                 # print("文件存在：", filename)
                 continue
