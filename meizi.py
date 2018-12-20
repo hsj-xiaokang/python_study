@@ -26,6 +26,10 @@ headers={
 def getMM131Img(siteUrl):
     resp=requests.get(siteUrl)
     resp.encoding='utf-8'
+    # html5lib
+    # 最好的容错性
+    # 以浏览器的方式解析文档
+    # 生成HTML5格式的文档
     soup = BeautifulSoup(resp.text,'html5lib')
 
     dirname=soup.find('div',class_='content').h5.string
