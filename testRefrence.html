@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试参数引用传递,类似Java等参数方式</title>
+</head>
+<body>
+<script>
+    function test(arr){
+      if(Array.isArray(arr) && Object.prototype.toString.call(arr)  === '[object Array]'){
+       arr.push(1314)
+      }
+    }
+    arr = [1,2,3,4]
+    console.log(arr)
+    test(arr)
+    console.log(arr)
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@author: heshengjin-何胜金hsj
+@contact: 2356899074@qq.com
+@software: pycharm
+@file: reTest.py
+@time: 2018/12/19 0019 23:21
+@desc:正则表达式的使用
