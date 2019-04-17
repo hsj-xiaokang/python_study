@@ -16,8 +16,8 @@ import time
 # <type 'tuple'>
 a = (6)
 b = (6,5,6.7,8,9,0,4,4,6,)
-print type(a)
-print type(b)
+print( type(a))
+print( type(b))
 
 
 # ==============================方式2：继承方式===============================

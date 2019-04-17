@@ -9,4 +9,4 @@
 @desc:测试注释-(名词解释：usr-unix software resource)
 '''
 if __name__ == '__main__':
-    print '=====testComent===='
+    print( '=====testComent====')

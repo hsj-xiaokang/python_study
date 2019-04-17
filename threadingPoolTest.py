@@ -13,7 +13,7 @@ import threadpool
 
 
 def sayhello(str):
-    print "",str
+    print( "",str)
     time.sleep(2)
 
 name_list =['xiaozi','aa','bb','cc']
@@ -25,4 +25,4 @@ requests = threadpool.makeRequests(sayhello, name_list)
 [pool.putRequest(req) for req in requests]
 pool.wait()
 
-print '%d second'% (time.time()-start_time)
+print( '%d second'% (time.time()-start_time))

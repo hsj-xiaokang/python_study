@@ -13,15 +13,15 @@
 
 
 def test(n, *g, **kw):
-    print '--------------change----------------------'
+    print( '--------------change----------------------')
     # 一半参数list
-    print isinstance(n, list)
+    print( isinstance(n, list))
 
     # 可变参数tuple
-    print isinstance(g, list)
+    print( isinstance(g, list))
 
     # 关键字参数，copy的dict
-    print isinstance(kw, dict)
+    print( isinstance(kw, dict))
 
     # 改变一半参数
     n.append(100)
@@ -32,9 +32,9 @@ def test(n, *g, **kw):
     # 改变关键字参数，改变copy的那个
     kw['lby'].append(100)
 
-    print n
-    print g
-    print kw
+    print( n)
+    print( g)
+    print( kw)
 
 
 if __name__ == '__main__':
@@ -52,14 +52,14 @@ if __name__ == '__main__':
     kw = {'hsj': 27, 'lby': [1, 2, 3, 4]}
     # print isinstance(k, dict)
 
-    print '--------------start----------------------'
-    print n
-    print g
-    print kw
+    print( '--------------start----------------------')
+    print( n)
+    print( g)
+    print( kw)
 
     test(n, *g, **kw)
-    print '---------------end---------------------'
-    print n
-    print g
-    print kw
+    print( '---------------end---------------------')
+    print(n)
+    print( g)
+    print( kw)
 

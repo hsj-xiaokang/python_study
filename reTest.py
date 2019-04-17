@@ -38,18 +38,18 @@ b = re.compile(r"\d+\.\d*")
 
 # ********************************re模块********************************
 m = re.match(r'hello', 'hello world!')
-print m.group()
-print '===================================================================='
+print( m.group())
+print( '====================================================================')
 
 
 
 # ********************************Pattern对象相关********************************
 p = re.compile(r'(\w+) (\w+)(?P<sign>.*)', re.DOTALL)
 
-print "p.pattern:", p.pattern
-print "p.flags:", p.flags
-print "p.groups:", p.groups
-print "p.groupindex:", p.groupindex
+print( "p.pattern:", p.pattern)
+print( "p.flags:", p.flags)
+print( "p.groups:", p.groups)
+print( "p.groupindex:", p.groupindex)
 
 # -----search----
 # 将正则表达式编译成Pattern对象
@@ -60,44 +60,44 @@ match = pattern.search('hello world!')
 
 if match:
     # 使用Match获得分组信息
-    print match.group()
+    print( match.group())
 
 # -----split----
 p = re.compile(r'\d+')
-print p.split('one1two2three3four4')
+print( p.split('one1two2three3four4'))
 
 # -----findall----
 p = re.compile(r'\d+')
-print p.findall('one1two2three3four4')
+print( p.findall('one1two2three3four4'))
 
 # -----finditer----
 p = re.compile(r'\d+')
 for m in p.finditer('one1two2three3four4'):
-    print m.group()
+    print( m.group())
 
-print '===================================================================='
+print ('====================================================================')
 
 # ********************************Match对象相关********************************
 m = re.match(r'(\w+) (\w+)(?P<sign>.*)', 'hello world!',re.S)
 
-print "m.string:", m.string
-print "m.re:", m.re
-print "m.pos:", m.pos
-print "m.endpos:", m.endpos
-print "m.lastindex:", m.lastindex
-print "m.lastgroup:", m.lastgroup
+print( "m.string:", m.string)
+print( "m.re:", m.re)
+print( "m.pos:", m.pos)
+print( "m.endpos:", m.endpos)
+print( "m.lastindex:", m.lastindex)
+print( "m.lastgroup:", m.lastgroup)
 
-print "m.group(1,2):", m.group(1, 2)
-print "m.groups():", m.groups()
-print "m.groupdict():", m.groupdict()
-print "m.start(2):", m.start(2)
-print "m.end(2):", m.end(2)
-print "m.span(2):", m.span(2)
-print r"m.expand(r'\2 \1\3'):", m.expand(r'\2 \1\3')
-print '===================================================================='
+print( "m.group(1,2):", m.group(1, 2))
+print( "m.groups():", m.groups())
+print ("m.groupdict():", m.groupdict())
+print( "m.start(2):", m.start(2))
+print( "m.end(2):", m.end(2))
+print( "m.span(2):", m.span(2))
+print( r"m.expand(r'\2 \1\3'):", m.expand(r'\2 \1\3'))
+print( '====================================================================')
 
 
 if __name__ == "__main__":
     if match:
         # 使用Match获得分组信息
-        print match.group()
+        print( match.group())

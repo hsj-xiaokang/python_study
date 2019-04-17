@@ -6,6 +6,6 @@
 """
 import sys, os
 if __name__ == '__main__':
-    print sys.api_version
-    print os.name
-    print os.environ
+    print (sys.api_version)
+    print (os.name)
+    print (os.environ)

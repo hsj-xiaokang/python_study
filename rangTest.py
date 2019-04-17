@@ -12,9 +12,9 @@
 import os
 
 if __name__ == '__main__':
-    print [x * x for x in range(1, 11) if x % 2 == 0]
+    print( [x * x for x in range(1, 11) if x % 2 == 0])
 
-    print [m + n for m in 'abc' for n in 'xyz']
+    print( [m + n for m in 'abc' for n in 'xyz'])
 
     # 该目录下面的所有文件名和目录
-    print [d for d in os.listdir('.')]
+    print( [d for d in os.listdir('.')])

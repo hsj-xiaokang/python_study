@@ -67,7 +67,7 @@ if __name__ == '__main__':
     for numberItem in range(838, 1000000):
         # for numberItem in range(1900,3900):
         # print 'http://www.mm131.com/xinggan/'+bytes(numberItem)+'.html'
-        print numberItem
+        print (numberItem)
         try:
             getMM131Img('http://www.mm131.com/xinggan/' + bytes(numberItem) + '.html')
             getMM131Img('http://www.mm131.com/qingchun/' + bytes(numberItem) + '.html')
@@ -76,5 +76,5 @@ if __name__ == '__main__':
             getMM131Img('http://www.mm131.com/qipao/' + bytes(numberItem) + '.html')
 
             # getMM131Img('https://www.mzitu.com/' + bytes(numberItem))
-        except Exception, e:
-            print e.message
+        except Exception as  e:
+            print (e)

@@ -3,7 +3,7 @@
 多行注释
 原来Python这样
 """
-mystr = ur'''
+mystr = r'''
         这里不是注释
         多行操作
         '''
@@ -24,4 +24,4 @@ if __name__ == '__main__':
     # 第二遍的时候就不会打印，原因是没有了
     for i in mygenerator:
         print(i)
-    print mystr
+    print( mystr)
