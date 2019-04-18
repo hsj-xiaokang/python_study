@@ -1,0 +1,3 @@
+Python 入门教程：【草根学 Python （基于Python3.6）】 https://www.readwithu.com/
+
+https://github.com/TwoWater/Python
