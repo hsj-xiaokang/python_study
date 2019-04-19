@@ -1,3 +1,11 @@
 https://www.cnblogs.com/zhangju/p/5675251.html
 在Java或C#中存在块级作用域，即：大括号也是一个作用域。
 在python \ JavaScript语言中无块级作用域.
+
+
+
+
+Python 小技巧：for 循环后面接 else 语句
+https://blog.csdn.net/u012814856/article/details/78723071
+Java实现Python的for...else或while...else逻辑结构
+https://blog.csdn.net/cnds987/article/details/78729499
