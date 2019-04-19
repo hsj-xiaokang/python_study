@@ -9,3 +9,6 @@ Python 小技巧：for 循环后面接 else 语句
 https://blog.csdn.net/u012814856/article/details/78723071
 Java实现Python的for...else或while...else逻辑结构
 https://blog.csdn.net/cnds987/article/details/78729499
+
+Python 中 （&，|）和（and，or）之间的区别
+https://blog.csdn.net/weixin_40041218/article/details/80868521
