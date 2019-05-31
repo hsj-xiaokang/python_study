@@ -9,9 +9,10 @@
 with
 Python with语句定义及使用:https://blog.csdn.net/windy135/article/details/82584883
 """
+from builtins import object
 
 
-class Sample():
+class Sample(object):
     def __enter__(self):
         print('in enter')
         return self

@@ -46,5 +46,5 @@ def do(something):
 
 if __name__ == "__main__":
     say(r'一般装饰器')
-    say(r'带参数的装饰器hello')
+    # say(r'带参数的装饰器hello')
     do(r"带参数的装饰器my work")

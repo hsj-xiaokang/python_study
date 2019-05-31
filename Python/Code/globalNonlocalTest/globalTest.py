@@ -11,7 +11,7 @@ https://blog.csdn.net/qw_sunny/article/details/80972357
 #         a = 8  # a3  既是inner局部变量，又是模块全局变量
 #         print(a)  # a3 8，在inner的局部作用域中找到了a3
 #     inner()  # inner()函数结束，a3作为inner局部变量被释放
-#     print(a)  # a3 9,在outer局部作用域中没找到a，往上在全局作用域中找到了全局变量a3
+#     print(a)  # a3 8,在outer局部作用域中没找到a，往上在全局作用域中找到了全局变量a3
 # outer()  # outer()函数结束，a2作为outer局部变量被释放
 # print(a)  # a3 8，在当前模块全局作用域中找到了a3
 
@@ -45,10 +45,10 @@ https://blog.csdn.net/qw_sunny/article/details/80972357
 # outer()
 # print(a)  # a1 10，在当前模块全局作用域中找到了a1
 
-a = 10  # a1 当前模块全局变量
-def outer2():
-    nonlocal a  # outer2下一层为全局作用域，nonlocal不寻找全局变量，报错
-    a = 8
-    print(a)
-outer2()
-print(a)  # a1 10，在当前模块全局作用域中找到了a1
+# a = 10  # a1 当前模块全局变量
+# def outer2():
+#     nonlocal a  # outer2下一层为全局作用域，nonlocal不寻找全局变量，报错
+#     a = 8
+#     print(a)
+# outer2()
+# print(a)  # a1 10，在当前模块全局作用域中找到了a1

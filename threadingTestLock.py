@@ -17,6 +17,7 @@ lock_deposit = threading.Lock()
 
 
 def change_it(n):
+    # 使用外层的变量，自己不去定义变量
     global deposit
     deposit += n  # 存
     deposit -= n  # 取

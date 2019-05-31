@@ -8,9 +8,9 @@ class User(object):
     def __setattr__(self, name, value):
         # 每一次属性赋值时, __setattr__都会被调用，因此不断调用自身导致无限递归了
         # 会造成程序奔溃
-        self.name = value
+        # self.name = value
         # 正确的做法是下面
-        # return super(User, self).__setattr__(name, value)
+        return super(User, self).__setattr__(name, value)
 
 
 if __name__ == '__main__':

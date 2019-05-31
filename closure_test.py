@@ -8,8 +8,8 @@
 # @Software: PyCharm
 """
 闭包测试
+ nonlocal只会在局部查找
 """
-
 
 def study_time(time):
     def insert_time(min):

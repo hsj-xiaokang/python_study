@@ -41,3 +41,5 @@ if __name__ == '__main__':
     print( bPerson.decClsPublic)
     print( aPerson.decClsPublic)
     print( bPerson.getPriveDec)
+
+    print(bPerson._Person__decClsPrivate)

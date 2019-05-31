@@ -3,6 +3,7 @@
 
 class User(object):
     def __getattr__(self, name):
+        print("__getattr__,属性【不存在时候】调用该方法")
         print('调用了 __getattr__ 方法')
         return super(User, self).__getattr__(name)
 
@@ -15,6 +16,7 @@ class User(object):
         return super(User, self).__delattr__(name)
 
     def __getattribute__(self, name):
+        print("__getattribute__,属性【存不存在都会】被调用")
         print('调用了 __getattribute__ 方法')
         return super(User, self).__getattribute__(name)
 

@@ -18,7 +18,7 @@ def printHello(self,name='Py'):
     print("helloMethod {}".format(name))
 
 # 创建一个Hello类
-Hello = type('Hello',(object,),dict(helloMethod=printHello))
+Hello = type('aHello',(object,),dict(helloMethod=printHello))
 
 h = Hello()
 
@@ -27,3 +27,7 @@ h.helloMethod(name="测试type定义的类的方法")
 print(type(Hello))
 
 print(type(h.__class__))
+
+print(Hello.__name__)
+
+print(h.__class__)
