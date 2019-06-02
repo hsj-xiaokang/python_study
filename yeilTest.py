@@ -17,6 +17,17 @@ def fun():
         print('good', i)
 
 
-if __name__ == '__main__':
-    for x in fun():
-        print(x)
+# -*- coding: UTF-8 -*-
+def fibon(n):
+    a = b = 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+# 引用函数
+for x in fibon(10):
+    print(x , end = '\n ')
+
+# if __name__ == '__main__':
+    # for x in fun():
+        # print(x)
