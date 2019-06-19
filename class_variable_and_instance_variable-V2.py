@@ -2,7 +2,7 @@
 # -*- coding:UTF-8 -*-
 """
 python的类变量和成员变量
-类似于JavaScript方式，类属性和类方法就在prototype上面
+类似于JavaScript方式，类属性和类方法就在prototype上面(当然python没有原型概念，挂在类上面)
 <!DOCTYPE html>
 <html>
 	<head>
