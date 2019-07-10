@@ -21,6 +21,7 @@ while count < 3:
     count = count + 1
 else:
     print(count, " 大于或等于 5")
+#输出
 '''
 55  大于或等于 5
 '''
@@ -35,6 +36,7 @@ while count < 3:
 else:
     print(count, " 大于或等于 5")
 
+#输出
 '''
 1  小于 5
 '''
@@ -48,6 +50,7 @@ while count < 3:
 else:
     print(count, " 大于或等于 5")
 
+#输出
 '''
 1  小于 5
 2  小于 5
