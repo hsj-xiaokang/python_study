@@ -27,9 +27,11 @@ def test(n, *g, **kw):
     n.append(100)
 
     # 改变可变参数,tuple不可以改变
+    # g[2] = 3333
     g[3].append(100)
 
     # 改变关键字参数，改变copy的那个
+    kw['hsj'] = 18
     kw['lby'].append(100)
 
     print( n)
