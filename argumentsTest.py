@@ -48,8 +48,13 @@ def print_user_info( name ,  age  , sex = '男' ,**g):
     return;
 
 # 调用 print_user_info 函数
+# ----------散传参数-----------
 print_user_info( '两点水' ,18 , '女',g=[1,2,3])
-
+# ----------变量方式传参数------
+g = {'hsj':'hsj is smart!'}
+print_user_info('3点水',20,'man',**g)
+# ----------散传参数-----------
+print_user_info('3点水',20,'man',g=[1,2,3],h=[1,2,3])
 
 if __name__ == '__main__':
 
