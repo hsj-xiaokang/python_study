@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0041)http://www.fhdq.net/emoji/emojifuhao.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>emoji符号大全</title>
+<meta name="description" content="emoji,emoji表情,emoji符号大全">
+<meta name="keywords" content="emoji,emoji表情,emoji符号大全">
+<link href="./emoji符号大全_files/fuhao.css" rel="stylesheet" type="text/css">
+<style type="text/css" abt="234"></style><script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+<body class="index">
+<div class="header">
+<!-- <div class="start w960 center">
+<ul>
+<li class="welcome">【符号大全】</li>
+<li class="help"></li>
+</ul>
+</div> -->
+<!-- /start -->
+<div class="head w960 center">
+<div class="title">
+<ul>
+<li class="logo"><a href="http://www.fhdq.net/"><img alt="符号大全" src="./emoji符号大全_files/logo.gif"></a></li>
+<li class="topbanner" id="top">
+<script src="./emoji符号大全_files/push.js.下载"></script><script type="text/javascript" src="./emoji符号大全_files/top.js.下载"></script><script async="" src="./emoji符号大全_files/f.txt"></script>
+<!-- fhdq -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4728690377897090" data-ad-slot="2983298141"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</li>
+</ul>
+</div>
+<!-- /title -->
+<div class="nav">
+<ul><li><a href="http://www.fhdq.net/"><span>符号大全</span></a></li>
+<li><a href="http://www.fhdq.net/ts/"><span>特殊符号</span></a></li>
+<li><a href="http://www.fhdq.net/bq/"><span>表情符号</span></a></li>
+<li><a href="http://www.fhdq.net/ta/"><span>符号图案</span></a></li>
+<li><a href="http://www.fhdq.net/yy/"><span>语言符号</span></a></li>
+<li><a href="http://www.fhdq.net/wm/"><span>网名符号</span></a></li>
+<li><a href="http://www.fhdq.net/hb/"><span>货币符号</span></a></li>
+<li><a href="http://www.fhdq.net/bd/"><span>标点符号</span></a></li>
+<li><a href="http://www.fhdq.net/sx/"><span>数学符号</span></a></li>
+<li><a href="http://www.fhdq.net/gj/"><span>钢筋符号</span></a></li>
+<li><a href="http://www.fhdq.net/tz/"><span>图纸符号</span></a></li>
+<li><a href="http://www.fhdq.net/emoji/"><span>emoji符号</span></a></li>
+</ul>
+</div>
+</div>
+<!-- /head --></div><!-- /header -->
+<div class="bannerad">
+<script type="text/javascript" src="./emoji符号大全_files/banner.js.下载"></script><div style="margin-top:5px;">
+<script type="text/javascript" src="./emoji符号大全_files/rhqg4.js.下载"></script>
+</div>
+
+</div>
+<div class="w960 center clear">
+  <div class="pleft" style="margin-top:2px;">
+    <div class="listbox">
+      <dl class="tbox ta">
+        <dt><strong><h2>emoji符号大全(如有符号显示不正常，请更换浏览器或操作系统浏览。)</h2></strong></dt>
+        <dd>
+			<table>
+        <tbody><tr><th><a href="http://www.fhdq.net/emoji/emojifuhao.html#emojibq">表情</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojirw">人物</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojiss">手势</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojirc">日常</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojisj">手机</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojigg">公共</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojidw">动物</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojizw">植物</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojizr">自然</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojiys">饮食</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojiwt">文体</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojikb">恐怖</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojily">旅游</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojiwp">物品</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojibz">标志</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojisx">生肖</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojixz">星座</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojizb">钟表</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojixx">心形</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojihc">花草</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojisy">树叶</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojiyl">月亮</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojisg">水果</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojiqb">钱币</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojijt">交通</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojijz">建筑</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojibg">办公</a> <a href="http://www.fhdq.net/emoji/emojifuhao.html#emojijiantou">箭头</a>  </th></tr>
+<tr><td>🌹🍀🍎💰📱🌙🍁🍂🍃🌷💎🔪🔫🏀⚽⚡👄👍🔥</td></tr>
+				<tr>
+</tr><tr><th id="emojibq">emoji表情(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>😀😁😂😃😄😅😆😉😊😋😎😍😘😗😙😚☺😇😐😑😶😏😣😥😮😯😪😫😴😌😛😜😝😒😓😔😕😲😷😖😞😟😤😢😭😦😧😨😬😰😱😳😵😡😠</td></tr>
+
+<tr><th id="emojirw">emoji人物(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>👦👧👨👩👴👵👶👱👮👲👳👷👸💂🎅👰👼💆💇🙍🙎🙅🙆💁🙋🙇🙌🙏👤👥🚶🏃👯💃👫👬👭💏💑👪</td></tr>
+
+<tr><th id="emojiss">emoji手势(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>💪👈👉☝👆👇✌✋👌👍👎✊👊👋👏👐✍</td></tr>
+
+<tr><th id="emojirc">emoji日常(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>👣👀👂👃👅👄💋👓👔👕👖👗👘👙👚👛👜👝🎒💼👞👟👠👡👢👑👒🎩🎓💄💅💍🌂</td></tr>
+
+<tr><th id="emojisj">emoji手机(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>📱📲📶📳📴☎📞📟📠</td></tr>
+
+<tr><th id="emojigg">emoji公共(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>♻🏧🚮🚰♿🚹🚺🚻🚼🚾⚠🚸⛔🚫🚳🚭🚯🚱🚷🔞💈</td></tr>
+
+<tr><th id="emojidw">emoji动物(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🙈🙉🙊🐵🐒🐶🐕🐩🐺🐱😺😸😹😻😼😽🙀😿😾🐈🐯🐅🐆🐴🐎🐮🐂🐃🐄🐷🐖🐗🐽🐏🐑🐐🐪🐫🐘🐭🐁🐀🐹🐰🐇🐻🐨🐼🐾🐔🐓🐣🐤🐥🐦🐧🐸🐊🐢🐍🐲🐉🐳🐋🐬🐟🐠🐡🐙🐚🐌🐛🐜🐝🐞🦋</td></tr>
+
+<tr><th id="emojizw">emoji植物(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>💐🌸💮🌹🌺🌻🌼🌷🌱🌲🌳🌴🌵🌾🌿🍀🍁🍂🍃</td></tr>
+
+<tr><th id="emojizr">emoji自然(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🌍🌎🌏🌐🌑🌒🌓🌔🌕🌖🌗🌘🌙🌚🌛🌜☀🌝🌞⭐🌟🌠☁⛅☔⚡❄🔥💧🌊</td></tr>
+
+<tr><th id="emojiys">emoji饮食(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🍇🍈🍉🍊🍋🍌🍍🍎🍏🍐🍑🍒🍓🍅🍆🌽🍄🌰🍞🍖🍗🍔🍟🍕🍳🍲🍱🍘🍙🍚🍛🍜🍝🍠🍢🍣🍤🍥🍡🍦🍧🍨🍩🍪🎂🍰🍫🍬🍭🍮🍯🍼☕🍵🍶🍷🍸🍹🍺🍻🍴</td></tr>
+
+<tr><th id="emojiwt">emoji文体(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🎪🎭🎨🎰🚣🛀🎫🏆⚽⚾🏀🏈🏉🎾🎱🎳⛳🎣🎽🎿🏂🏄🏇🏊🚴🚵🎯🎮🎲🎷🎸🎺🎻🎬</td></tr>
+
+<tr><th id="emojikb">emoji恐怖(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>😈👿👹👺💀☠👻👽👾💣</td></tr>
+
+<tr><th id="emojily">emoji旅游(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🌋🗻🏠🏡🏢🏣🏤🏥🏦🏨🏩🏪🏫🏬🏭🏯🏰💒🗼🗽⛪⛲🌁🌃🌆🌇🌉🌌🎠🎡🎢🚂🚃🚄🚅🚆🚇🚈🚉🚊🚝🚞🚋🚌🚍🚎🚏🚐🚑🚒🚓🚔🚕🚖🚗🚘🚚🚛🚜🚲⛽🚨🚥🚦🚧⚓⛵🚤🚢✈💺🚁🚟🚠🚡🚀🎑🗿🛂🛃🛄🛅</td></tr>
+
+<tr><th id="emojiwp">emoji物品(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>💌💎🔪💈🚪🚽🚿🛁⌛⏳⌚⏰🎈🎉🎊🎎🎏🎐🎀🎁📯📻📱📲☎📞📟📠🔋🔌💻💽💾💿📀🎥📺📷📹📼🔍🔎🔬🔭📡💡🔦🏮📔📕📖📗📘📙📚📓📃📜📄📰📑🔖💰💴💵💶💷💸💳✉📧📨📩📤📥📦📫📪📬📭📮✏✒📝📁📂📅📆📇📈📉📊📋📌📍📎📏📐✂🔒🔓🔏🔐🔑🔨🔫🔧🔩🔗💉💊🚬🔮🚩🎌💦💨</td></tr>
+
+<tr><th id="emojibz">emoji标志(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>♠♥♦♣🀄🎴🔇🔈🔉🔊📢📣💤💢💬💭♨🌀🔔🔕✡✝🔯📛🔰🔱⭕✅☑✔✖❌❎➕➖➗➰➿〽✳✴❇‼⁉❓❔❕❗©®™🎦🔅🔆💯🔠🔡🔢🔣🔤🅰🆎🅱🆑🆒🆓ℹ🆔Ⓜ🆕🆖🅾🆗🅿🆘🆙🆚🈁🈂🈷🈶🈯🉐🈹🈚🈲🉑🈸🈴🈳㊗㊙🈺🈵▪▫◻◼◽◾⬛⬜🔶🔷🔸🔹🔺🔻💠🔲🔳⚪⚫🔴🔵</td></tr>
+
+<tr><th id="emojisx">emoji生肖(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🐁🐂🐅🐇🐉🐍🐎🐐🐒🐓🐕🐖</td></tr>
+
+<tr><th id="emojixz">emoji星座(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>♈♉♊♋♌♍♎♏♐♑♒♓⛎</td></tr>
+
+<tr><th id="emojizb">emoji钟表(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🕛🕧🕐🕜🕑🕝🕒🕞🕓🕟🕔🕠🕕🕡🕖🕢🕗🕣🕘🕤🕙🕥🕚🕦⌛⏳⌚⏰⏱⏲🕰</td></tr>
+
+<tr><th id="emojixx">emoji心形(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>💘❤💓💔💕💖💗💙💚💛💜💝💞💟❣</td></tr>
+
+<tr><th id="emojihc">emoji花草(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>💐🌸💮🌹🌺🌻🌼🌷🌱🌿🍀</td></tr>
+
+<tr><th id="emojisy">emoji树叶(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🌿🍀🍁🍂🍃</td></tr>
+
+<tr><th id="emojiyl">emoji月亮(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🌑🌒🌓🌔🌕🌖🌗🌘🌙🌚🌛🌜🌝</td></tr>
+
+<tr><th id="emojisg">emoji水果(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🍇🍈🍉🍊🍋🍌🍍🍎🍏🍐🍑🍒🍓</td></tr>
+
+<tr><th id="emojiqb">emoji钱币(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>💴💵💶💷💰💸💳</td></tr>
+
+<tr><th id="emojijt">emoji交通(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🚂🚃🚄🚅🚆🚇🚈🚉🚊🚝🚞🚋🚌🚍🚎🚏🚐🚑🚒🚓🚔🚕🚖🚗🚘🚚🚛🚜🚲⛽🚨🚥🚦🚧⚓⛵🚣🚤🚢✈💺🚁🚟🚠🚡🚀</td></tr>
+
+<tr><th id="emojijz">emoji建筑(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>🏠🏡🏢🏣🏤🏥🏦🏨🏩🏪🏫🏬🏭🏯🏰💒🗼🗽⛪🌆🌇🌉</td></tr>
+
+<tr><th id="emojibg">emoji办公(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>📱📲☎📞📟📠🔋🔌💻💽💾💿📀🎥📺📷📹📼🔍🔎🔬🔭📡📔📕📖📗📘📙📚📓📃📜📄📰📑🔖💳✉📧📨📩📤📥📦📫📪📬📭📮✏✒📝📁📂📅📆📇📈📉📊📋📌📍📎📏📐✂🔒🔓🔏🔐🔑</td></tr>
+
+<tr><th id="emojijiantou">emoji箭头(非图片可复制)<span id="rtop"><a href="http://www.fhdq.net/emoji/emojifuhao.html#top">↑返回顶部</a></span></th></tr>
+<tr><td>⬆↗➡↘⬇↙⬅↖↕↔↩↪⤴⤵🔃🔄🔙🔚🔛🔜🔝</td></tr>
+
+			</tbody></table>
+        </dd>
+      </dl>
+    </div>
+    <!-- /listbox -->
+  </div>
+  <!-- /pleft -->
+  <div class="pright">
+    <div class="commend mt1">
+      <dl class="tbox">
+        <dt><strong><h3>符号搜索</h3></strong></dt>
+        <dd>
+          <ul class="d1 ico2">
+          	<div class="form">
+          	<form name="formsearch" action="http://www.fhdq.net/plus/search.php">
+           <input type="hidden" name="kwtype" value="0">
+           　 <input name="q" type="text" class="search-keyword" id="search-keyword" value="">
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="title" selected="1">检索标题</option>
+               <option value="titlekeyword">智能模糊</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>
+          	</form>
+  </div>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- /commend -->
+		<div class="commend mt1 remen">
+			<dl class="tbox">
+				<dt><strong><h3>热门符号</h3></strong></dt>
+				<dd>
+					<ul class="c1 ico2">
+           <li><a href="http://www.fhdq.net/wm/171.html" target="_blank">带符号的网名</a>
+            </li>
+<li><a href="http://www.fhdq.net/ts/174.html" target="_blank">翅膀符号</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/29.html" target="_blank">网名符号大全</a>
+            </li>
+<li><a href="http://www.fhdq.net/ts/306.html" target="_blank">空格符号怎么打</a>
+            </li>
+<li><a href="http://www.fhdq.net/ts/179.html" target="_blank">太阳符号</a>
+            </li>
+<li><a href="http://www.fhdq.net/ts/193.html" target="_blank">love符号</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/157.html" target="_blank">带符号的个性网名</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/155.html" target="_blank">带符号的情侣网名</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/175.html" target="_blank">QQ昵称 - 嘴唇符号</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/169.html" target="_blank">QQ昵称 - 四叶草符</a>
+            </li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+	<div id="list-ad1" class="ad250 mt1">
+	<script type="text/javascript" src="./emoji符号大全_files/listad1.js.下载"></script><script async="" src="./emoji符号大全_files/f.txt"></script>
+<!-- fhdq-ad1 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4728690377897090" data-ad-slot="8718447344"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div style="margin-top:10px;">
+<script type="text/javascript" src="./emoji符号大全_files/ztdxjt7ly9.js.下载"></script>
+</div>
+
+	</div>
+    <div class="commend mt1">
+      <dl class="tbox">
+        <dt><strong><h3>最新符号</h3></strong></dt>
+        <dd>
+          <ul class="d1 ico2">
+           <li><a href="http://www.fhdq.net/ta/309.html" target="_blank">就向流星許個心願☆對你說声我愛</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/308.html" target="_blank">带符号的可爱网名</a>
+            </li>
+<li><a href="http://www.fhdq.net/wm/307.html" target="_blank">QQ昵称 - 火焰</a>
+            </li>
+<li><a href="http://www.fhdq.net/ts/306.html" target="_blank">空格符号怎么打</a>
+            </li>
+<li><a href="http://www.fhdq.net/ta/305.html" target="_blank">正值ヅ帥气は善良　大方メ可愛ミ</a>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+	<div id="list-ad3" class="ad250 mt1">
+	<script type="text/javascript" src="./emoji符号大全_files/listad2.js.下载"></script><script async="" src="./emoji符号大全_files/f.txt"></script>
+<!-- fhdq-ad2 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4728690377897090" data-ad-slot="1195180542"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+	</div>
+    <div class="commend mt1">
+      <dl class="tbox">
+        <dt><strong><h3>推荐符号</h3></strong></dt>
+        <dd>
+          <ul class="d1 ico2">
+            <li><a href="http://www.fhdq.net/hb/1.html" target="_blank">人民币符号</a></li>
+            <li><a href="http://www.fhdq.net/hb/2.html" target="_blank">欧元符号</a></li>
+            <li><a href="http://www.fhdq.net/tz/11.html" target="_blank">直径符号</a></li>
+            <li><a href="http://www.fhdq.net/bd/44.html" target="_blank">标点符号大全</a></li>
+            <li><a href="http://www.fhdq.net/bd/5.html" target="_blank">箭头符号大全</a></li>
+          </ul>
+
+        </dd>
+      </dl>
+    </div>
+	<div id="list-ad2" class="ad250 mt1">
+	<script type="text/javascript" src="./emoji符号大全_files/listad3.js.下载"></script><script type="text/javascript" src="./emoji符号大全_files/3zn3.js.下载"></script>
+
+	</div>
+  </div>
+  <!-- /right -->
+</div>
+
+<!--<div class="flink w960 center mt1 clear">
+	<dl class="tbox">
+		<dt>
+			<strong>友情链接<span style="font-weight:normal;"></span></strong>
+			<span class="more">
+				<a href="plus/flink.php">所有链接</a> | <a href="plus/flink_add.php">申请加入</a>
+			</span>
+		</dt>
+		<dd>
+			<ul class="f5">
+				<li><a href='' target='_blank'>符号大全</a> </li>
+		  </ul>
+		</dd>
+	</dl>
+</div>--><!-- /flink -->
+<div class="footer w960 center mt1 clear">
+<script language="javascript" type="text/javascript" src="./emoji符号大全_files/footad.js.下载"></script>
+	<p class="link">
+	</p>
+	<p class="copyright">
+		Copyright © 2013 www.fhdq.net　<a href="http://www.fhdq.net/">符号大全</a>　版权所有
+	</p>
+	<p class="powered">
+		 <span id="dcount"></span>
+	</p>
+</div>
+<script language="javascript" type="text/javascript" src="./emoji符号大全_files/footer.js.下载"></script><span style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000188746'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000188746' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1000188746"><a href="https://www.cnzz.com/stat/website.php?web_id=1000188746" target="_blank" title="站长统计">站长统计</a></span><script src="./emoji符号大全_files/z_stat.php" type="text/javascript"></script><script src="./emoji符号大全_files/core.php" charset="utf-8" type="text/javascript"></script></span>
+
+<!-- /footer -->
+
+
+</body></html>
