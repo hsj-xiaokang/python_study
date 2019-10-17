@@ -16,10 +16,11 @@ def debug(func):
         return func(*args, **kwargs)
     return wrapper  # 返回
 
-@debug
-def say(something):
+# @debug
+def say1(something):
     print( r"hello {}!".format(something))
-
+# 如果没有使用@语法，等同于
+say1 = debug(say1)
 
 # ===============带参数的装饰器=============
 def logging(level):
@@ -33,18 +34,18 @@ def logging(level):
     return wrapper
 
 # @logging(level='INFO')
-# def say(something):
-#     print( r"say {}!".format(something))
+def say2(something):
+    print( r"say2 {}!".format(something))
 
 # 如果没有使用@语法，等同于
-# say = logging(level='INFO')(say)
+say2 = logging(level='INFO')(say2)
 
-@logging(level='DEBUG')
-def do(something):
-    print( r"do {}...".format(something))
+# @logging(level='DEBUG')
+# def say2(something):
+#     print( r"say2 {}...".format(something))
 
 
 if __name__ == "__main__":
-    say(r'一般装饰器')
-    # say(r'带参数的装饰器hello')
-    do(r"带参数的装饰器my work")
+    say1(r'一般装饰器')
+    say2(r'带参数的装饰器hello')
+    # do(r"带参数的装饰器my work")
